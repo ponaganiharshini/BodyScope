@@ -132,7 +132,3 @@ Open `index.html` in your browser. The 3D explorer, simulator, labeling and buil
 
 **P. Harshini**
 B.Tech Computer Science Engineering, Stanley College of Engineering & Technology for Women, Hyderabad
-
-## 📄 License
-
-Released for educational purposes. Add a license (for example MIT) before publishing.
