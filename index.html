@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>BodyScope</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="stylesheet" href="style.css"></head><body><div class="w">
+<h1>🫀 BodyScope <button id="wb" class="p">🖥️ Full screen 16:9</button></h1><p class="s">Explore organs in 3D, run health simulations, and test yourself. <small>Educational use only, not medical advice.</small></p>
+<div class="card"><div class="row b"><b>Progress</b><small id="pt"></small><button id="rs" style="padding:4px 8px;font-size:12px">Reset</button></div><div class="bar"><i id="pb"></i></div><div class="row" id="bg"></div></div>
+<div class="tabs"><button class="on" data-t="ex">Explore</button><button data-t="si">What if?</button><button data-t="lb">Label</button><button data-t="qz">Quiz</button></div>
+<div id="cv"><button id="fsb">⛶ Full screen</button><span id="tip">Drag to rotate · tap a part</span></div><small id="vm"></small>
+
+<section id="ex"><div class="row" id="og"></div>
+<div class="card"><b id="et"></b><p id="ea" style="margin:6px 0"></p><div class="row" id="pl"></div>
+<div class="row"><button id="mode">Explain deeper</button><select id="lang" class="in" style="flex:none"><option value="en">English</option><option value="te">తెలుగు</option><option value="hi">हिन्दी</option></select><button id="trb">🌐 Translate</button><button id="spk" class="p">🔊 Listen</button></div>
+<div class="row"><input id="aq" placeholder="Ask: what is the aorta?" style="flex:1;min-width:0;padding:9px;border-radius:10px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);font:inherit"><button id="mic">🎤</button><button id="ab" class="p">Ask</button></div><div id="chat" style="max-height:260px;overflow:auto;margin-top:6px"></div><button id="lsa" class="p" style="margin-top:6px">🔊 Listen to answer</button><small>AI Tutor text is generated from the organ or part you select or ask about.</small></div></section>
+
+<section id="si" class="hide"><div class="card">
+<label>🏃 Exercise intensity: <b id="v1">0</b>%<input type="range" id="s1" min="0" max="100" value="0"></label>
+<label>🚬 Cigarettes per day: <b id="v2">0</b><input type="range" id="s2" min="0" max="20" value="0"></label>
+<label>🧂 Salt intake: <b id="v3">5</b> g/day<input type="range" id="s3" min="2" max="12" value="5"></label>
+<label>😴 Sleep: <b id="v4">8</b> hours<input type="range" id="s4" min="3" max="9" value="8"></label></div>
+<div class="card"><div class="m"><div><b id="hr">70</b><small>Heart rate (bpm)</small></div><div><b id="bp">115</b><small>Systolic BP</small></div><div><b id="o2">99</b><small>Oxygen %</small></div></div>
+<p id="sx" style="margin:10px 0 0"></p><div class="row"><button id="spk2" class="p">🔊 Listen</button></div></div>
+<div class="card"><b>🩺 Personal health check</b><div class="row"><input id="ha" type="number" placeholder="Age" class="in"><input id="hw" type="number" placeholder="Weight kg" class="in"><input id="hh" type="number" placeholder="Height cm" class="in"></div><button id="hb" class="p">Calculate</button><p id="ho" style="margin:8px 0 0"></p><small>Estimates for learning only. Not medical advice.</small></div></section>
+
+<section id="lb" class="hide"><div class="card"><b>Drag each name onto the heart</b> <small>(or tap a name, then tap a part)</small>
+<svg id="sv" viewBox="0 0 300 250" style="width:100%;max-width:420px;display:block;margin:auto">
+<g data-z="Right atrium"><ellipse cx="90" cy="85" rx="42" ry="34" fill="#6aa8ff"/><text x="90" y="89">?</text></g>
+<g data-z="Left atrium"><ellipse cx="205" cy="80" rx="40" ry="32" fill="#e57373"/><text x="205" y="84">?</text></g>
+<g data-z="Right ventricle"><ellipse cx="105" cy="170" rx="48" ry="58" fill="#3b6fd4"/><text x="105" y="174">?</text></g>
+<g data-z="Left ventricle"><ellipse cx="200" cy="170" rx="52" ry="62" fill="#c62839"/><text x="200" y="174">?</text></g>
+<g data-z="Aorta"><ellipse cx="150" cy="30" rx="34" ry="16" fill="#8e1b1b"/><text x="150" y="34">?</text></g></svg>
+<div class="row" id="ch"></div><p class="fb" id="lf"></p><div class="row b"><b id="ls"></b><button id="lr">Reset</button></div></div></section>
+
+<section id="qz" class="hide"><div class="card"><div class="row"><button id="aiq" class="p">🤖 New AI quiz on current organ</button></div><div class="row b"><b id="qn"></b><b id="qs"></b></div><p id="qq"></p><div id="qo"></div><p class="fb" id="qf"></p><button id="qx" class="p hide">Next</button></div></section>
+</div><div id="gh" class="chip hide"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script></body></html>
